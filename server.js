@@ -78,6 +78,7 @@ app.delete('/users/deleteUser/:email', (req, res) => {
         });
 });
 
-var listener = app.listen(8081, function() {
+const port = process.env.PORT || 3000;
+var listener = app.listen(port, function() {
     console.log('I am express server running on port 8081.  Send me some requests, and I will respond.');
 });
